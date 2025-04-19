@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# Mini MVP – Matchmaking Inteligente Fictício 🧠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Desenvolvido como parte do processo seletivo para a vaga de **Desenvolvedor(a) Full Stack** na **Legal.ai**.
 
-Currently, two official plugins are available:
+Este projeto propõe uma interface simples e funcional de matchmaking com uma inteligência artificial **simulada**, priorizando clareza no código, criatividade e uma boa experiência do usuário.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Visualização
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Tela Principal
+![Tela Principal](./prints/tela-principal.png)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Resultados do Match
+![Resultados](./prints/resultados-match.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Como Executar o Projeto
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Siga os passos abaixo para rodar o projeto localmente:
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/legalai-mvp.git
+   ```
+2. Acesse o diretório do projeto:
+   ```bash
+   cd legalai-mvp
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **React**: Biblioteca principal para construção da interface.
+- **Vite**: Ferramenta de build para um desenvolvimento rápido.
+- **Shadcn/UI**: Componentes de UI para um design limpo e responsivo.
+- **React Hook Form**: Gerenciamento e validação de formulários.
+
+---
+
+## 🧠 Decisões de Desenvolvimento
+
+- Utilizei **Shadcn/UI** para criar uma interface visualmente limpa e responsiva.
+- Implementei um formulário simples com validação leve usando **React Hook Form**.
+- Simulei a afinidade entre perfis com números aleatórios (60% a 95%).
+- Renderizei perfis mockados dinamicamente após o envio do formulário.
+- Escrevi o código com **TypeScript** mínimo, focando em clareza e simplicidade.
+
+---
+
+## ⏳ Melhorias com Mais Tempo
+
+Se houvesse mais tempo, eu:
+- Implementaria uma lógica de afinidade real, baseada nos dados fornecidos pelo usuário.
+- Integraria um banco de dados como **Supabase** ou **Firebase** para persistência de dados.
+- Adicionaria autenticação simples via **GitHub** ou **Google**.
+- Incorporaria animações com **Framer Motion** para feedbacks visuais mais ricos.
+- Criaria uma página de perfil detalhada para cada conexão.
+
+---
+
+## 📬 Contato
+
+**Ryan Jesus**  
+[LinkedIn](https://linkedin.com/in/euryanjesus)  
+[Email](mailto:euryanjesus@gmail.com)
