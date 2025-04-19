@@ -1,19 +1,17 @@
 // app.tsx
 import { useState } from "react"
-import { matchFormSchema } from "./utils/validators"
-import { z } from "zod"
 import { MatchForm } from "./components/match-form"
 import { MatchCard } from "./components/match-card"
 import { fakeMatches } from "../src/data/fake-matches"
 
 function App() {
-  const [matches, setMatches] = useState<typeof fakeMatches | null>(null)
-
-  function handleSubmit(data: z.infer<typeof matchFormSchema>) {
-    // simula uma lógica de afinidade baseada no input
+  type Match = (typeof fakeMatches)[number] & { affinity: number }
+  const [matches, setMatches] = useState<Match[] | null>(null)
+  
+  function handleSubmit() {
     const enrichedMatches = fakeMatches.map((match) => {
-      const randomAffinity = Math.floor(Math.random() * 36) + 60 // 60% a 95%
-      return { ...match, affinity: randomAffinity }
+      const randomAffinity = Math.floor(Math.random() * 36) + 60
+      return { ...match, affinity: randomAffinity } // ✅ aqui você adiciona affinity
     })
     setMatches(enrichedMatches)
   }

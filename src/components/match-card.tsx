@@ -1,8 +1,9 @@
 type props = {
-    name: string
-    description: string
-    affinity: number
-  }
+  name: string
+  description: string
+  affinity: number 
+}
+
   
   export function MatchCard({ name, description, affinity }: props) {
     return (
